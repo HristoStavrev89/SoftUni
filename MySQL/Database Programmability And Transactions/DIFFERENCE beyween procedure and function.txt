@@ -1,0 +1,17 @@
+differences between functions and procedures:
+
+- A FUNCTION always returns a value using the return statement. PROCEDURE may return one or more values through parameters or may not return any at all.
+
+- Functions are normally used for computations where as procedures are normally used for executing business logic.
+
+- A Function returns 1 value only. Procedure can return multiple values (max 1024).
+
+- Stored procedure always returns an integer value of zero by default. Whereas function return types could be scalar or table or table values.
+
+- Stored procedures have a precompiled execution plan, where as functions are not.
+
+- A function can be called directly by SQL statement like SELECT func_name FROM DUAL while procedures cannot.
+
+- Stored procedure has the security and reduces the network traffic and also we can call stored procedure in any number of applications at a time.
+
+- A Function can be used in the SQL queries while a procedure cannot be used in SQL queries. That causes a major difference between function and procedures.

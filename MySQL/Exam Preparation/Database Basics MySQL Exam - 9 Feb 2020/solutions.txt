@@ -1,0 +1,52 @@
+INSERT INTO coaches (first_name, last_name, salary, coach_level)
+select p.first_name, p.last_name, (2 * p.salary) salary, char_length(p.first_name) coach_level from players p
+where p.age >= 45;
+
+
+UPDATE coaches AS c
+SET c.coach_level = c.coach_level + 1
+WHERE c.first_name LIKE ('A%') AND
+      (SELECT COUNT(pc.player_id) AS count FROM players_coaches AS pc WHERE pc.coach_id = c.id) >= 1;
+
+
+
+SELECT p.first_name, p.age, p.salary FROM players AS p
+ORDER BY p.salary DESC;
+
+
+
+SELECT p.id, CONCAT(p.first_name, ' ', p.last_name) AS full_name, p.age, p.position, p.hire_date FROM players AS p
+JOIN skills_data AS sd ON p.skills_data_id = sd.id
+WHERE  p.position = 'A'
+  AND p.hire_date IS NULL
+  AND sd.strength > 50
+ORDER BY p.salary, p.age;
+
+
+
+SELECT t.name AS team_name, t.established, t.fan_base, COUNT(p.id) AS players_count FROM teams AS t
+LEFT JOIN players AS p on t.id = p.team_id
+GROUP BY t.id
+ORDER BY players_count DESC, t.fan_base DESC;
+
+
+select max(sd.speed) max_speed, t.name town_name from players p
+right join teams tm on p.team_id = tm.id
+right join stadiums s on tm.stadium_id = s.id
+right join towns t on s.town_id = t.id
+left join skills_data sd on p.skills_data_id = sd.id
+where tm.name != 'Devify'
+group by t.id, t.name
+order by max_speed desc, t.name;
+
+
+
+
+
+SELECT c.name AS `name`, COUNT(p.id) AS `total_count_of_players`, SUM(p.salary) FROM countries AS c
+LEFT JOIN towns t on c.id = t.country_id
+LEFT JOIN stadiums s on t.id = s.town_id
+LEFT JOIN teams team on s.id = team.stadium_id
+LEFT JOIN players p on team.id = p.team_id
+GROUP BY c.name
+ORDER BY total_count_of_players DESC, c.name;

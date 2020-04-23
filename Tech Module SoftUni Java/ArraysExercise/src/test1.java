@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        String[] array = scanner.nextLine().split(" ");
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        n = n % array.length;
+
+
+        for (int i = 0; i < n; i++) {
+            String firstElement = array[0];
+            for (int j = 0; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            array[array.length - 1] = firstElement;
+
+        }
+
+        for (String one : array) {
+            System.out.print(one + " ");
+        }
+
+
+
+
+
+
+    }
+}

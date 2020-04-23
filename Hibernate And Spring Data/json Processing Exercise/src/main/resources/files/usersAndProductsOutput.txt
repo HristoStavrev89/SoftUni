@@ -1,0 +1,68 @@
+[
+  {
+    "category": "Electronics",
+    "productsCount": 40,
+    "averagePrice": 1,
+    "totalRevenue": 40
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 40,
+    "averagePrice": 1,
+    "totalRevenue": 40
+  },
+  {
+    "category": "Adult",
+    "productsCount": 38,
+    "averagePrice": 1,
+    "totalRevenue": 38
+  },
+  {
+    "category": "Other",
+    "productsCount": 38,
+    "averagePrice": 1,
+    "totalRevenue": 38
+  },
+  {
+    "category": "Business",
+    "productsCount": 36,
+    "averagePrice": 1,
+    "totalRevenue": 36
+  },
+  {
+    "category": "Fashion",
+    "productsCount": 32,
+    "averagePrice": 1,
+    "totalRevenue": 32
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 31,
+    "averagePrice": 1,
+    "totalRevenue": 31
+  },
+  {
+    "category": "For Children",
+    "productsCount": 31,
+    "averagePrice": 1,
+    "totalRevenue": 31
+  },
+  {
+    "category": "Sports",
+    "productsCount": 30,
+    "averagePrice": 1,
+    "totalRevenue": 30
+  },
+  {
+    "category": "Garden",
+    "productsCount": 28,
+    "averagePrice": 1,
+    "totalRevenue": 28
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 26,
+    "averagePrice": 1,
+    "totalRevenue": 26
+  }
+]
