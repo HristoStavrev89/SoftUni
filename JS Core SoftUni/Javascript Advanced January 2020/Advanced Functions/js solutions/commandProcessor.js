@@ -22,23 +22,26 @@ var processor = (function(){
     }
 
     return {
-
-        append,
-        removeEnd,
-        removeStart,
-        print
+        append: append,
+        removeEnd: removeEnd,
+        removeStart: removeStart,
+        print: print
     };
 
 })();
 
-processor.print();
+// processor.print();
 
-processor.append('Joro')
+// processor.append('Joro')
 
-processor.print();
+// processor.print();
 
-processor.removeEnd(3)
+// processor.removeEnd(3)
 
-processor.print();
+// processor.print();
+
+
+
+
 
 
