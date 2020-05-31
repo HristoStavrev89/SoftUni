@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println("Enter password default (empty): ");
         String password = reader.readLine();
-        String myPassword = "Cveti271191";
+        String myPassword = "root";
         password = password.equals("") ? myPassword : password;
 
         Properties props = new Properties();
